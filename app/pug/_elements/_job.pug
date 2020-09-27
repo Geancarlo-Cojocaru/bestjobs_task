@@ -1,0 +1,65 @@
+//- Job mixin
+
+mixin job(job)
+	//- verificator pt date constructor
+	if(job === undefined || job.length == 0)
+		p no data for build	
+
+	//- constructor
+	else
+
+		.card-job
+			.job-info
+
+				h2.display-2
+					a.link-job(href="#")= job.title
+				
+				.employer
+					h3.display-4.ellipsis-base @ 
+						a.link-title.text-underline(href="#")= job.employer
+
+					if (job.employerRating || job.responsive)
+						.employer-data
+							if (job.employerRating)
+								.element
+									.rating
+										.empty.d-inline-block
+											- for (let i = 0; i < 5; i++) {
+													i.far.fa-star.text-warning
+											-}
+										.filled.d-inline-block(style='width:' + (job.employerRating * 20) + '%')
+											- for (let i = 0; i < 5; i++) {
+													i.fas.fa-star.text-warning
+											-}
+									| 
+									span= job.employerRating
+							if (job.responsive)
+								.element
+									i.fas.fa-redo-alt.text-secondary
+									| 
+									span Responsive
+
+					if (job.wage)
+						.display-3.text-headings= job.wage + ' €'
+					.locations.ellipsis-base= 'in ' + job.location
+
+					
+
+			.job-extra
+				.employer-logo
+					a.img-fit(href="#")
+						img(
+							src=job.employerLogo[0],
+							srcset= job.employerLogo[1] + ' 60w, ' + job.employerLogo[0] + ' 140w',
+							sizes="(max-width: 600px) 60px, 100vw",
+							alt= job.employer
+							)
+
+				.actions
+					a.extra-actions(href="#", data-toggle="tooltip", data-placement="top", title="Share job")
+						i.fas.fa-share-alt
+					| 
+					a.extra-actions(href="#", data-toggle="tooltip", data-placement="top", title="Like job")
+						i.fas.fa-heart
+					|
+					a.btn.btn-sm.btn-primary.btn-details(href="#") Job details

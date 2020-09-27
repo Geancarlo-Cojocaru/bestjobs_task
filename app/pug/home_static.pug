@@ -1,0 +1,45 @@
+//- VARIABILE
+//-=========================================================================
+- var titlu = 'Home static';
+
+//- import data for build
+include data/_jobs-list.pug
+
+
+
+//- HTML
+//-=========================================================================
+doctype html
+html
+	include _elements/_head.pug
+	body
+
+		// NAVIGATION 
+		include _elements/_navbar.pug
+
+		// JUMBOTRON 
+		include _elements/_jumbotron.pug
+
+		// SEARCH 
+		include _elements/_search.pug
+
+		// JOB LISTING 
+		section.job-listing.bg-light.mt-4.mt-lg-6.pb-3
+			.container-fluid.px-0.px-sm-customSpace.overflow-xs
+
+				h2.py-4.px-3.py-sm-5.px-xl-0 Jobs in your location				
+
+				// jobs listing 
+				.row.mt-n2.mt-sm-n3
+					include _elements/_job.pug
+					each job, index in jobs
+						if (index < 40)				
+							.col-sm-6.col-md-4.col-lg-3
+								+job(job)
+
+				// see all 
+				.text-center.pt-4.pb-3
+					button.btn.btn-primary.btn-lg See all jobs
+
+		// FOOTER
+		include _elements/_footer.pug

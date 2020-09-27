@@ -1,0 +1,20 @@
+/* Globally enable grid prefixes */
+/* autoprefixer grid: autoplace */
+
+.grid-wrapper {
+	width: 100%;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-gap: 20px;
+
+	.item {
+		padding: 10px;
+		color: #fff;
+		background-color: #58d5f6;
+
+		&:nth-child(even) {
+			background-color: #236758;
+		}
+	}
+}

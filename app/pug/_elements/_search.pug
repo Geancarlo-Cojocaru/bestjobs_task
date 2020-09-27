@@ -1,0 +1,29 @@
+//- SEARCH
+//-=========================================================================
+
+#search-job.search-box.search-stuck
+	.container-fluid.content
+		.card.shadow
+			.card-body.pt-4.pb-1.px-2.px-sm-3.px-lg-3.pb-lg-4
+
+				.container-fluid
+					.row.align-items-end
+
+						.col-lg-5.mb-4.mb-lg-1
+							.form-group.mb-0
+								label.font-weight-bold.text-headings What are you searching for?
+								.outside-icons
+									input.form-control.form-control-lg.pl-6(type="text", placeholder="Keyword")
+									i.fas.fa-search.fa-lg.prepend
+						.col-lg-5.mb-4.mb-lg-1
+							.form-group.mb-0
+								label.font-weight-bold.text-headings Where are you searching?
+								.outside-icons
+									input.form-control.form-control-lg.px-6(type="text", placeholder="City/County/Country")
+									i.fas.fa-map-marker-alt.fa-lg.prepend
+									i.far.fa-dot-circle.fa-lg.text-secondary.append.clickable
+						.col-lg-2.mb-4.mb-lg-1
+							.form-group.mb-0
+								button.btn.btn-primary.btn-lg.btn-block(type="button") Search
+
+

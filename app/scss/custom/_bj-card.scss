@@ -1,0 +1,208 @@
+// GENERAL
+$the-breakpoint: sm; // when we get vertical card
+$non-devices: xl;
+
+.card-job {
+	display: flex;
+	margin: 3px 0px;
+	padding: 18px 14px;
+	border-bottom: 1px solid #e3e3e3;
+	font-size: rem(14px);
+	color: #777;
+	background-color: #fff;
+
+	@include media-breakpoint-up($the-breakpoint) {
+		margin: 6px 0px;
+		height: 345px; // need this for IE 11
+		min-height: 345px; // if you want to make sure that all the cards have the same height
+		padding: 104px 30px 29px 30px;
+		flex-direction: column;
+		position: relative;
+		overflow: hidden;
+		border-radius: 5px;
+	}
+
+	@include media-breakpoint-up($non-devices) {
+		transition: box-shadow 0.35s ease;
+
+		&:hover {
+			box-shadow: 0 0 25px rgba(#000, .25);
+
+			.actions .btn-details {
+				transform: translateY(0px);
+			}
+		}
+	}
+
+
+	// JOB TEXT
+	.job-info {
+		display: flex;
+		flex-direction: column;
+		flex: 1 0 auto;
+		max-width: calc(100% - 70px);
+		padding-right: 16px;
+
+		@include media-breakpoint-up($the-breakpoint) {
+			max-width: 100%;
+			padding-right: 0;
+		}
+	}
+
+	h2 {
+		margin: 0;
+		flex: 1 0 auto;	
+
+		a {
+			display: inline-block;
+			max-height: rem(20px * 1.5 * 1.5 + 1); // font-size * line-height r1 * line-height r2
+			overflow: hidden;
+			margin-bottom: rem(10px);
+		}
+	}
+
+	h3 {
+		margin-bottom: rem(2px);
+		max-height: rem(14px * 1.5); // font-size * line-height		
+	}
+
+
+
+	// employer data
+	.employer-data {
+		display: flex;
+		margin-top: rem(5px);
+		margin-bottom: rem(14px);
+		max-height: rem(13px * 1.5); // font-size * line-height
+
+		.element {
+			font-size: rem(13px);
+			white-space: nowrap;
+
+			&:before {
+				margin: 0 8px;
+				content: "|";
+				color: #ccc;
+				font-size: rem(13px);
+			}
+
+			&:first-child:before {
+				display: none;
+			}
+
+			&:only-child em {
+				display: inline;
+				font-style: normal;
+			}
+
+			&:last-child {
+				overflow: hidden;
+				text-overflow: ellipsis;				
+			}
+		}
+
+		span {
+			margin-left: 1px;
+		}
+	}
+
+
+	// rating
+	.rating {
+		display: inline-block;
+		position: relative;
+	}
+
+	.filled {
+		position: absolute;
+		overflow: hidden;
+		top: 0;
+		left: 0;
+		width: 50%;
+	}
+
+
+	// salary
+	.display-3 {
+		margin-top: rem(7px);
+		margin-bottom: rem(2px);
+	}
+
+	.locations {
+		max-height: rem(14px * 1.5); // font-size * line-height
+	}
+
+
+
+	// JOB EXTRA
+	.job-extra {
+		display: flex;
+		flex-direction: column;
+		flex: 0 1 auto;
+		max-width: 70px;
+		text-align: right;
+
+		@include media-breakpoint-up($the-breakpoint) {
+			padding-top: 13px;
+			flex-direction: row;
+			max-width: 100%;
+			text-align: left;
+		}
+	}
+
+	.employer-logo {
+		flex: 1 0 auto;
+
+		@include media-breakpoint-up($the-breakpoint) {
+			display: block;
+			position: absolute;
+			top: 30px;
+			left: 30px;
+		}
+
+		.img-fit {
+			display: block;
+			height: 55px;
+			overflow: hidden;
+			
+
+			@include media-breakpoint-up($the-breakpoint) {
+				height: 45px;
+				width: 100%;
+			}
+
+			img {
+				max-width: 110px;
+				max-height: 100%;
+			}
+		}
+	}
+
+	.actions {
+		padding-top: 12px;
+
+		.btn-details {
+			display: none;
+		}
+
+		@include media-breakpoint-up($non-devices) {
+			display: flex;
+			width: 100%;
+
+			.extra-actions {
+				margin-right: 5px;
+			}
+
+
+			// btn-details
+			.btn-details {
+				display: inline-block;
+				vertical-align: top;
+				margin-left: auto;
+				transition: all 0.35s ease;
+				transform: translateY(60px);
+			}
+		}
+	}
+
+}

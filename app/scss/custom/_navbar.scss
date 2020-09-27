@@ -1,0 +1,158 @@
+$the-collapse-breakpoint:  lg !default;
+
+
+// STICKY CLASSES
+.stuck {
+  position: sticky;
+  top: 0;
+  z-index: 900;
+}
+
+
+nav.navbar {
+  box-shadow: 0 0 2px rgba(#000, .2);
+
+  @include media-breakpoint-up($the-collapse-breakpoint) {
+    box-shadow: none;
+  }
+}
+
+
+
+// SVG LOGO
+.navbar-brand {	
+
+  @include media-breakpoint-up($the-collapse-breakpoint) {
+    padding-top: rem(10px);
+    padding-bottom: rem(10px);
+  }  
+
+  svg {// IE needs both width and height for svg's
+  	height: 24px;
+  	width: 97px;
+
+  	@include media-breakpoint-up($the-collapse-breakpoint) {
+      height: 36px;
+      width: 145px;
+    }
+  }
+
+  @include media-breakpoint-up($the-collapse-breakpoint) {
+  	.svg-blue {transition: fill 0.35s ease;}  	
+    &:hover {
+    	.svg-blue {fill: $secondary;}
+    }
+  }
+}
+
+
+
+// NAV
+.navbar-nav {
+	padding-bottom: rem(32px);
+
+	@include media-breakpoint-up($the-collapse-breakpoint) {
+			padding-bottom: 0;
+	}
+
+
+	// button spacing
+	.btn {
+		margin-top: rem(12px);
+
+		@include media-breakpoint-up($the-collapse-breakpoint) {
+			margin-top: 0;
+	    margin-left: rem(14px);
+	  }
+
+	  i {
+	  	margin-right: 2px;
+	  }
+	}
+}
+
+
+
+//
+// MOBILE MENU BUTTON
+// --------------------------------------------------
+.buton-meniu {
+  position: relative;
+  border: none;
+  outline: none !important;
+  display: inline-block !important;
+  padding: 5px 0px 5px 0px;
+  margin: 0;
+  background-color: transparent;
+  vertical-align: top;
+  cursor: pointer;
+
+  @include media-breakpoint-up($the-collapse-breakpoint) {
+    display: none !important;
+  }
+
+  span {
+    margin: 3px 0px;
+    display: block;
+    width: 18px;
+    height: 2px;
+    overflow: hidden;
+    background-color: #000;
+    transition: all 0.25s ease;    
+  }
+
+  em {
+    display: block;
+    margin: 4px 9px 0px 0px;
+    float: left;
+    font-size: 12px;
+    font-style: normal;
+    color: #333;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+
+  em:not(*:root) {// Chrome Fix
+    margin-top: 5px;
+  }
+
+  &.meniu-activ {
+    span:nth-of-type(2) {
+      background-color: $primary;
+      transform: translate(2px, 5px) rotate(45deg);
+    }
+
+    span:nth-of-type(3) {
+    	transform: translateX(5px);
+      opacity: 0;
+    }
+
+    span:nth-of-type(4) {
+      background-color: $primary;
+      transform: translate(2px, -5px) rotate(-45deg);
+    }
+  }   
+}
+
+
+
+//
+// SEARCH NAV BUTTON
+// --------------------------------------------------
+.search-nav-button {
+	display: inline-block;
+	margin: 0 6px 0 auto;
+	padding: 2px 8px;
+	color: #333;
+	text-decoration: none;
+
+	&:after {
+		margin-left: 12px;
+		content: '|';
+		color: #ccc;
+	}
+
+	@include media-breakpoint-up($the-collapse-breakpoint) {
+    display: none;
+  }
+}

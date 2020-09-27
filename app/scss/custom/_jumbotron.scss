@@ -1,0 +1,31 @@
+.jumbotron {
+
+	.container-fluid {
+		background-image: url(#{$path--images}/home-hero.jpg);
+		background-repeat: no-repeat;
+		background-position: center bottom;
+		background-size: 130%;
+
+		@include media-breakpoint-up(sm) {
+			background-size: contain;
+			background-position: right -100px center;
+		}
+
+		@include media-breakpoint-up(xl) {
+			background-size: contain;
+			background-position: right center;
+		}
+	}
+
+	.lead {
+		line-height: 1.2;
+		color: $gray-600;
+	}
+
+	h1 {
+		@include media-breakpoint-up(xl) {
+			margin-bottom: rem(26px);
+			font-size: rem(34px);
+		}
+	}
+}

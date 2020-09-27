@@ -1,0 +1,36 @@
+//- VARIABILE
+//-=========================================================================
+- var titlu = 'Cheatsheet';
+
+
+
+//- HTML
+//-=========================================================================
+doctype html
+html
+	include _elements/_head.pug
+	body
+
+		// navbar 
+		include _elements/_navbar.pug
+
+		.container-fluid
+
+			// typography 
+			include _cheatsheet/_typography.pug
+
+			// buttons 
+			include _cheatsheet/_buttons.pug
+
+			// navbar 
+			include _elements/_search.pug
+
+			// cards 
+			include _cheatsheet/_cards.pug
+
+			// form 
+			include _cheatsheet/_form.pug
+
+
+		//- FOOTER
+		include _elements/_footer.pug

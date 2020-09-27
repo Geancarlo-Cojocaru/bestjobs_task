@@ -1,0 +1,27 @@
+.outside-icons {
+	position: relative;
+
+	.prepend,
+	.append {
+		display: inline-block;
+		position: absolute;
+		top: 50%;
+		margin-top: rem(-8px);
+		width: 30px;
+		text-align: center;
+		pointer-events: none;
+	}
+
+	.prepend {
+		left: rem(16px);
+	}
+
+	.append {
+		right: rem(16px);
+	}
+
+	.clickable {
+		pointer-events: initial;
+		cursor: pointer;
+	}
+}

@@ -1,0 +1,177 @@
+//- FORM
+//-=========================================================================
+
+h1.cheatsheet Form
+.row
+
+
+	.col-xl-6
+		p.cheatsheet input
+
+		// input 
+		.form-group
+			label(for="input-01") Email address
+			input#input-01.form-control(type="email", aria-describedby="emailHelp", placeholder="Enter email")
+			small#emailHelp.form-text.text-muted We'll never share your email with anyone else.
+
+	.col-xl-6
+		p.cheatsheet select
+
+		// select 
+		.form-group
+			label(for="select-01") Example select
+			select#select-01.form-control
+				option 1
+				option 2
+				option 3
+				option 4
+				option 5
+			small#emailHelp.form-text.text-danger We'll never share your email with anyone else.
+
+
+	.col-xl-6
+		p.cheatsheet input sizes
+
+		// input sizes 
+		input.form-control.form-control-lg(type="text", value="input large")
+		input.form-control.form-control-sm(type="text", value="input small")
+
+
+	.col-xl-6
+		p.cheatsheet select sizes
+
+		// select sizes 
+		select.form-control.form-control-lg
+			option Large select
+		select.form-control.form-control-sm
+			option Small select
+
+
+	.col-xl-6
+		p.cheatsheet select multiple
+
+		// select multiple 
+		.form-group
+			label(for="mselect-01") Example multiple select
+			select#mselect-01.form-control(multiple)
+				option 1
+				option 2
+				option 3
+				option 4
+				option 5
+
+
+	.col-xl-6
+		p.cheatsheet Custon select
+
+		// select custom 
+		select.custom-select.custom-select-lg
+			option Large select
+		select.custom-select
+			option Normal select
+		select.custom-select.custom-select-sm
+			option Small select
+
+
+	.col-xl-6
+		p.cheatsheet textarea
+
+		// textarea 
+		.form-group
+			label(for="textarea-01") Example textarea
+			textarea#textarea-01.form-control(rows="3")
+
+
+	.col-xl-6
+		p.cheatsheet readonly
+
+		// readonly 
+		input.form-control(type="text", value="Readonly input here…", readonly)
+
+
+	.col-xl-6
+		p.cheatsheet readonly plain text
+
+		// readonly plain text 
+		input.form-control-plaintext(type="text", value="Readonly plain text input", readonly)
+
+
+	.col-xl-6
+		p.cheatsheet checkbox
+
+		// checkbox 
+		.form-check
+			label.form-check-label
+				input.form-check-input(type="checkbox", value="")
+				|  Option one is this and that—be sure to include why it's great
+		.form-check.disabled
+			label.form-check-label
+				input.form-check-input(type="checkbox", value="", disabled="")
+				|  Option two is disabled
+
+
+	.col-xl-6
+		p.cheatsheet radio
+
+		// radio 
+		.form-check.form-check-inline
+			label.form-check-label
+				input#inlineRadio1.form-check-input(type="radio", name="inlineRadioOptions", value="option1")
+				|  1
+		.form-check.form-check-inline
+			label.form-check-label
+				input#inlineRadio2.form-check-input(type="radio", name="inlineRadioOptions", value="option2")
+				|  2
+		.form-check.form-check-inline.disabled
+			label.form-check-label
+				input#inlineRadio3.form-check-input(type="radio", name="inlineRadioOptions", value="option3", disabled="")
+				|  3
+
+	
+	.col-xl-6
+		p.cheatsheet checkbox custom
+
+		// checkbox custom 
+		.form-group
+			label.custom-form-element.checkbox-block
+				input(type="checkbox", name="checkbox2")
+				span Checkbox 1
+			label.custom-form-element.checkbox-block
+				input(type="checkbox", name="checkbox2")
+				span Checkbox 2
+			label.custom-form-element.checkbox-block
+				input(type="checkbox", name="checkbox2")
+				span Checkbox 3
+
+
+	.col-xl-6
+		p.cheatsheet radio custom
+
+		// caco 
+		.form-group
+			label.custom-form-element.checkbox-inline
+				input(type="radio", name="radio1")
+				span Radio 1
+			label.custom-form-element.checkbox-inline
+				input(type="radio", name="radio1")
+				span Radio 2
+			label.custom-form-element.checkbox-inline
+				input(type="radio", name="radio1")
+				span Radio 3
+			small#emailHelp.form-text.text-danger We'll never share your email with anyone else.
+
+	
+	.col-xl-6
+		p.cheatsheet toggle switch
+
+		// toggle switch 
+		input#toggle-01.switch-input(type="checkbox", name="switch")
+		label.switch-label(for="toggle-01") Switch
+
+	.col-xl-6
+		p.cheatsheet input file
+
+		// input file 
+		.form-group
+			label(for="iFile-01") Example file input
+			input#iFile-01.form-control-file(type="file")

@@ -1,0 +1,67 @@
+// SCROLLING
+html {
+	scroll-behavior: smooth;
+}
+
+
+// LINKS
+a {
+	transition: all 0.35s ease;
+}
+
+.link-title {
+	color: $headings-color;
+}
+
+.link-job {
+	color: desaturate($primary, 5%);
+}
+
+.link-title:hover, .link-job:hover {
+	color:$primary;
+}
+
+
+// TEXT
+.text-underline {
+	text-decoration: underline;
+}
+
+.text-headings {
+	color: $headings-color;
+}
+
+.ellipsis-base {	
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+
+
+// ICON BUTTONS
+.extra-actions {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 30px;
+	height: 30px;
+	overflow: hidden;
+	border-radius: 50%;
+	font-size: rem(15px);
+	color: #777;
+	background-color: $light;
+
+	&:hover {
+		color: $secondary;
+		text-decoration: none;
+	}
+}
+
+
+// overflow
+.overflow-xs {
+	@include media-breakpoint-down(xs) {
+		overflow: hidden;
+	}	
+}
