@@ -37,7 +37,7 @@ The custom script is located in app/js/infinite.scroll.js
 ### Job post card
 - Considering that the 3 pillars for visual perception are visual acuity, contrast sensitivity and color perception **the most important UX change for this project was to increase the font sizes, color contrast and spacing,** especially for the users of mobile devices. The website users are of all ages and have different visual perception, so making information easier to see is of paramount importance.
 - At the moment, the eye-tracking pattern for parsing the job post information is not optimal, being a 'T' for mobile and a reverted 'Y' for large screens. So the second most important UX change was to align the text to the left to follow the most common 'F' reading pattern.
-- Increased the visibility of the compnany rating, especially on devices. Also added the 'Responsive' tag for mobile.
-- Added the share button on the card, users can share jobs without extra clicks.
+- Increased the visibility of the compnany rating, especially on devices. Also added the 'Responsive employer' tag for mobile view.
+- Added the share button on the card, users should be able to share jobs without the extra clicks.
 - The "Share" and "Love" buttons are in the peripherical view on mobile, but they have good enough contrast to be noticeble now.
 - I removed the anchor that was covering the whole card's space, because we have multiple actions availabile on a post and a click/touch in the wrong place or 1mm outside the bounding box would lead to an unwanted action.
